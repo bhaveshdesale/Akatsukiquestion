@@ -50,9 +50,9 @@
     </div>
 
     <script>
-        // Base64 encoded "oljkwbdjdpl" (to prevent easy inspection)
+
         const base64EncodedPassword = "b2xqa3diZGpkcGw=";
-        const encodedKey = "LTM="; // Base64 encoded "-3"
+        const encodedKey = "LTM="; 
 
         function decryptCaesarCipher(text, shift) {
             return text.replace(/[a-zA-Z]/g, function (char) {
@@ -63,19 +63,19 @@
         }
 
         function revealPassword() {
-            // Decode Base64 values
+           
             let decodedPassword = atob(base64EncodedPassword);
-            let key = parseInt(atob(encodedKey)); // Convert key to integer
+            let key = parseInt(atob(encodedKey)); 
 
-            // Decrypt using Caesar Cipher
+         
             let decryptedPassword = decryptCaesarCipher(decodedPassword, key);
 
-            // Display the decrypted password dynamically
+      
             document.getElementById("encryptedCode").textContent = decryptedPassword;
             document.getElementById("encryptionKey").textContent = key;
         }
 
-        // Call the function when the success page is loaded
+       
         window.onload = function() {
             if (document.getElementById("successPage")) {
                 revealPassword();
