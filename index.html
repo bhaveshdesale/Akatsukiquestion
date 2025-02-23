@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akatsuki Challenge</title>
+    <!-- Want to get Password? -->
+<!-- Pawword is Kira -->
+  
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/counter.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ninja+Naruto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="passwordPage">
+        <div class="password-form">
+            <h1>🔥 Akatsuki Challenge 🔥</h1>
+            <input type="password" id="passwordInput" placeholder="Enter the password that you will find in this webpage...">
+            <button onclick="checkPassword()">Get Code</button>
+            <p id="errorMessage" class="error"></p>
+        </div>
+    </div>
+
+    <div class="container hidden" id="quizPage">
+        <div class="quiz-container">
+            <h2>🎭 Shinobi Trial 🎭</h2>
+            <p>A reinforcement learning agent is trained to maximize long-term rewards, but it keeps choosing short-term gains instead. What AI concept can fix this issue?</p>
+<div class="options">
+    <button onclick="checkAnswer('A')">A) Overfitting</button>
+    <button onclick="checkAnswer('B')">B) Reward Shaping</button>
+    <button onclick="checkAnswer('C')">C) Bias-Variance Tradeoff</button>
+    <button onclick="checkAnswer('D')">D) Vanishing Gradient</button>
+    <button onclick="checkAnswer('E')">E) Temporal Difference Learning</button>
+    <button onclick="checkAnswer('F')">F) Exploration-Exploitation Balance</button>
+</div>
+
+            <p id="timer" class="hidden">Genjutsu Lock: <span id="timeLeft"></span></p>
+        </div>
+    </div>
+
+    <div class="container hidden" id="successPage">
+        <div class="success-container">
+            <h2>🌟 Mission Accomplished! 🌟</h2>
+            <div class="passwords-container">
+                <p>Encrypted Code: <span class="password">oljkwbdjdpl</span></p>
+                
+                <p>Key: <span class="password">-3</span></p>
+            </div>
+            <!-- <button onclick="restartChallenge()">Begin New Mission</button> -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
